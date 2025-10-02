@@ -68,6 +68,10 @@
     "overrides": {
       "@types/react": "19.0.2",
       "@types/react-dom": "19.0.2"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@vercel/speed-insights",
+      "sharp"
+    ]
   }
 }

@@ -15,6 +15,7 @@ import {
   GridIcon,
   LockClosedIcon,
   ValueNoneIcon,
+  FrameIcon,
 } from "@radix-ui/react-icons"
 
 import { patterns } from "@/lib/patterns"
@@ -606,6 +607,20 @@ export function BackgroundForm() {
                         >
                           <DotsHorizontalIcon className="h-5 w-5" />
                           <span className="mt-1 text-xs">Dots</span>
+                        </Label>
+                      </div>
+                      <div>
+                        <RadioGroupItem
+                          value="groovy"
+                          id="groovy"
+                          className="peer sr-only"
+                        />
+                        <Label
+                          htmlFor="groovy"
+                          className="flex cursor-pointer flex-col items-center rounded-md border-2 border-muted bg-popover p-2 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+                        >
+                          <FrameIcon className="h-5 w-5" />
+                          <span className="mt-1 text-xs">Groovy</span>
                         </Label>
                       </div>
                     </div>

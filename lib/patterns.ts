@@ -62,8 +62,27 @@ function dots({ color = "black", opacity = 0.5 }: PatternProps) {
       <circle id="Oval-377-Copy-14" cx="13" cy="13" r="3"></circle>
     </g>
   </g>
-</svg>    
+</svg>
 `)
+  )
+}
+function groovy({ color = "black", opacity = 0.5 }: PatternProps) {
+  return (
+    "data:image/svg+xml;base64," +
+    btoa(`<svg
+      width="24px"
+      height="40px"
+      viewBox="0 0 24 40"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="groovy" fill="${color}" fill-opacity="${opacity}">
+            <path d="M0,40 C5.5228475,40 10,35.5228475 10,30 L10,20 L10,0 C4.4771525,0 0,4.4771525 0,10 L0,20 L0,40 Z M22,40 C16.4771525,40 12,35.5228475 12,30 L12,20 L12,0 C17.5228475,0 22,4.4771525 22,10 L22,20 L22,40 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>`)
   )
 }
 
@@ -80,4 +99,10 @@ export const patterns = {
     svg: dots,
     label: "Dots",
   },
+  groovy: {
+    svg: groovy,
+    label: "Groovy",
+  },
 }
+// ['grid', 'graph-paper', 'dots', 'groovy']
+export const patternsArray = Object.entries(patterns).map(([key, value]) => (key))

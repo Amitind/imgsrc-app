@@ -1,7 +1,8 @@
 import { z } from "zod"
+import { patternsArray } from "@/lib/patterns"
 
 const gridOverlaySchema = z.object({
-  pattern: z.enum(["grid", "graph-paper", "dots"]),
+  pattern: z.enum(patternsArray),
   color: z.string(),
   opacity: z.number().default(0.5),
   blurRadius: z.number().default(20),
